@@ -23,16 +23,13 @@
           <a class="nav-link active" aria-current="page" href="${pageContext.request.contextPath }/Default?page=home">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="${pageContext.request.contextPath }/Default?page=profile">My Profile</a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link" href="${pageContext.request.contextPath }/Default?page=management">Book Management</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="${pageContext.request.contextPath }/Default?page=add">Add New Book</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="${pageContext.request.contextPath }/Default?page=request">Book Requests</a>
+          <a class="nav-link" href="${pageContext.request.contextPath }/Default?page=cart">Cart</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="${pageContext.request.contextPath }/Default?page=login">Login | Register</a>

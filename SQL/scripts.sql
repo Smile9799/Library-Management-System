@@ -7,6 +7,7 @@ create table users
     name varchar(50) not null,
     email varchar(50) not null unique,
     password varchar(255) not null,
+    password_salt longblob not null,
     user_type varchar(50) not null
 );
 create table books
@@ -29,4 +30,4 @@ create table request_books
     foreign key(book_ISBN) references books(ISBN)
 );
 
-select * from books;
+select * from users;

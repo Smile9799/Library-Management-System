@@ -16,24 +16,42 @@ public class User {
 	private String name;
 	@Column(name = "password")
 	private String password;
+	@Column(name = "password_salt")
+	private byte[] passwordSalt;
 	@Column(name = "email")
 	private String email;
 	@Column(name = "user_type")
 	private String userType;
 
-	public User(String name, String password, String email, String userType) {
+	public User(String name, String password, byte[] passwordSalt, String email, String userType) {
 		this.name = name;
 		this.password = password;
+		this.passwordSalt = passwordSalt;
 		this.email = email;
 		this.userType = userType;
 	}
 
-	public User(int id, String name, String password, String email, String userType) {
+	public User(String password, String email) {
+		super();
+		this.password = password;
+		this.email = email;
+	}
+
+	public User(int id, String name, String password, byte[] passwordSalt, String email, String userType) {
 		this.id = id;
 		this.name = name;
 		this.password = password;
+		this.passwordSalt = passwordSalt;
 		this.email = email;
 		this.userType = userType;
+	}
+
+	public byte[] getPasswordSalt() {
+		return passwordSalt;
+	}
+
+	public void setPasswordSalt(byte[] passwordSalt) {
+		this.passwordSalt = passwordSalt;
 	}
 
 	public User() {
